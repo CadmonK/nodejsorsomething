@@ -3,7 +3,7 @@
 var can = document.getElementById("can").getContext("2d");
 can.font = "30px Arial";
 can.fillStyle = "#999999";
-const socket = new WebSocket("localhost:8080");
+const socket = new WebSocket("ws://localhost:8080");
 socket.addEventListener("message", (event) => {
     can.fillText(event.data.toString(),50,50);
 });
