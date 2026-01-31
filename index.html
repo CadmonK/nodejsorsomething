@@ -1,8 +1,7 @@
+<canvas id="can" width="500" height="500"></canvas>
 <script>
 const socket = new WebSocket("ws://localhost:8080");
-<canvas id="can" width="500" height="500"></canvas>
 socket.addEventListener("message", (data) => {
     can.fillText(data.toString(),50,50);
 });
 </script>
-
